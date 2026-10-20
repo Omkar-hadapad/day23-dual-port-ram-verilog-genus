@@ -93,7 +93,6 @@ The project covers:
 
 ### Block diagram
 
-![Dual-Port RAM block diagram](images/dual_port_ram_block_diagram.png)
 ## System Architecture Flowchart
 
 
