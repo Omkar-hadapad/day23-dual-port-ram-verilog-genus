@@ -1,4 +1,4 @@
-#DAY23- Dual-Port RAM Design and Verification — Verilog RTL & Cadence Genus
+# DAY23- Dual-Port RAM Design and Verification — Verilog RTL & Cadence Genus
 
 <p align="center">
   <b>Digital VLSI • Verilog RTL • Memory Architecture • Functional Verification • ASIC Synthesis</b>
