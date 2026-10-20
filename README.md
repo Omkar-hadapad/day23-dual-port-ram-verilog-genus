@@ -94,6 +94,54 @@ The project covers:
 ### Block diagram
 
 ![Dual-Port RAM block diagram](images/dual_port_ram_block_diagram.png)
+## System Architecture Flowchart
+
+```mermaid
+flowchart TB
+    TOP["Day23_top"] --> RAM["U_RAM: dual_port_ram"]
+
+    subgraph PA["Port A"]
+        AA["addr_a [5:0]"]
+        DA["din_a [15:0]"]
+        WA["we_a"]
+        OA["dout_a [15:0]"]
+    end
+
+    subgraph PB["Port B"]
+        AB["addr_b [5:0]"]
+        DB["din_b [15:0]"]
+        WB["we_b"]
+        OB["dout_b [15:0]"]
+    end
+
+    RAM --> DEC["Address Decode / Selection"]
+    RAM --> WC["WC: write_control"]
+    DEC --> MEM[("Memory Array<br/>64 × 16 bits<br/>1024 bits")]
+    WC --> MEM
+
+    AA --> DEC
+    AB --> DEC
+    DA --> WC
+    DB --> WC
+    WA --> WC
+    WB --> WC
+
+    MEM --> RA["Port A asynchronous read"]
+    MEM --> RB["Port B asynchronous read"]
+    RA --> MA["Reset output mask"]
+    RB --> MB["Reset output mask"]
+    MA --> OA
+    MB --> OB
+
+    CLK["clk: positive-edge write"]
+    RST["rst: active-high"]
+    CLK --> WC
+    RST --> WC
+    RST --> MA
+    RST --> MB
+
+    WC -. "Same-address write conflict: reject both" .-> MEM
+```
 
 If the image is stored elsewhere in the repository, update the path above to match the actual filename.
 
