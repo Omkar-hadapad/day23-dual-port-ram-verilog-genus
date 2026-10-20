@@ -1,0 +1,234 @@
+ncsim> 
+ncsim> database -open waves -into waves.shm -default
+Created default SHM database waves
+ncsim> probe -create -shm day23_dual_port_ram_tb.addr_a day23_dual_port_ram_tb.addr_b day23_dual_port_ram_tb.clk day23_dual_port_ram_tb.din_a day23_dual_port_ram_tb.din_b day23_dual_port_ram_tb.display_data day23_dual_port_ram_tb.dout_a day23_dual_port_ram_tb.dout_b day23_dual_port_ram_tb.errors day23_dual_port_ram_tb.i day23_dual_port_ram_tb.passed_checks day23_dual_port_ram_tb.rst day23_dual_port_ram_tb.total_checks day23_dual_port_ram_tb.we_a day23_dual_port_ram_tb.we_b
+Created probe 1
+ncsim> run
+
+===============================================================
+ DAY 23: HIERARCHICAL DUAL-PORT RAM TESTBENCH
+===============================================================
+[CONFIGURATION]
+  Memory capacity : 64 words x 16 bits = 1024 bits
+  Address width   : 6 bits
+  Read operation  : Asynchronous
+  Write operation : Positive clock edge
+  Reset           : Active-high output mask; memory retained
+===============================================================
+  PORT A | ADDR=0x00 | EXPECTED=0x0000 | ACTUAL=0x0000
+[PASS] Reset masks Port A output to zero
+  PORT B | ADDR=0x00 | EXPECTED=0x0000 | ACTUAL=0x0000
+[PASS] Reset masks Port B output to zero
+
+[TESTBENCH MEMORY SEEDING]
+  Writing 0x1000 + address into all 64 locations.
+[WRITE A] time=20000 address=0x00 data=0x1041
+[WRITE A] time=30000 address=0x01 data=0x1042
+[WRITE A] time=40000 address=0x02 data=0x1043
+[WRITE A] time=50000 address=0x03 data=0x1044
+[WRITE A] time=60000 address=0x04 data=0x1045
+[WRITE A] time=70000 address=0x05 data=0x1046
+[WRITE A] time=80000 address=0x06 data=0x1047
+[WRITE A] time=90000 address=0x07 data=0x1048
+[WRITE A] time=100000 address=0x08 data=0x1049
+[WRITE A] time=110000 address=0x09 data=0x104a
+[WRITE A] time=120000 address=0x0a data=0x104b
+[WRITE A] time=130000 address=0x0b data=0x104c
+[WRITE A] time=140000 address=0x0c data=0x104d
+[WRITE A] time=150000 address=0x0d data=0x104e
+[WRITE A] time=160000 address=0x0e data=0x104f
+[WRITE A] time=170000 address=0x0f data=0x1050
+[WRITE A] time=180000 address=0x10 data=0x1051
+[WRITE A] time=190000 address=0x11 data=0x1052
+[WRITE A] time=200000 address=0x12 data=0x1053
+[WRITE A] time=210000 address=0x13 data=0x1054
+[WRITE A] time=220000 address=0x14 data=0x1055
+[WRITE A] time=230000 address=0x15 data=0x1056
+[WRITE A] time=240000 address=0x16 data=0x1057
+[WRITE A] time=250000 address=0x17 data=0x1058
+[WRITE A] time=260000 address=0x18 data=0x1059
+[WRITE A] time=270000 address=0x19 data=0x105a
+[WRITE A] time=280000 address=0x1a data=0x105b
+[WRITE A] time=290000 address=0x1b data=0x105c
+[WRITE A] time=300000 address=0x1c data=0x105d
+[WRITE A] time=310000 address=0x1d data=0x105e
+[WRITE A] time=320000 address=0x1e data=0x105f
+[WRITE A] time=330000 address=0x1f data=0x1060
+[WRITE A] time=340000 address=0x20 data=0x1061
+[WRITE A] time=350000 address=0x21 data=0x1062
+[WRITE A] time=360000 address=0x22 data=0x1063
+[WRITE A] time=370000 address=0x23 data=0x1064
+[WRITE A] time=380000 address=0x24 data=0x1065
+[WRITE A] time=390000 address=0x25 data=0x1066
+[WRITE A] time=400000 address=0x26 data=0x1067
+[WRITE A] time=410000 address=0x27 data=0x1068
+[WRITE A] time=420000 address=0x28 data=0x1069
+[WRITE A] time=430000 address=0x29 data=0x106a
+[WRITE A] time=440000 address=0x2a data=0x106b
+[WRITE A] time=450000 address=0x2b data=0x106c
+[WRITE A] time=460000 address=0x2c data=0x106d
+[WRITE A] time=470000 address=0x2d data=0x106e
+[WRITE A] time=480000 address=0x2e data=0x106f
+[WRITE A] time=490000 address=0x2f data=0x1070
+[WRITE A] time=500000 address=0x30 data=0x1071
+[WRITE A] time=510000 address=0x31 data=0x1072
+[WRITE A] time=520000 address=0x32 data=0x1073
+[WRITE A] time=530000 address=0x33 data=0x1074
+[WRITE A] time=540000 address=0x34 data=0x1075
+[WRITE A] time=550000 address=0x35 data=0x1076
+[WRITE A] time=560000 address=0x36 data=0x1077
+[WRITE A] time=570000 address=0x37 data=0x1078
+[WRITE A] time=580000 address=0x38 data=0x1079
+[WRITE A] time=590000 address=0x39 data=0x107a
+[WRITE A] time=600000 address=0x3a data=0x107b
+[WRITE A] time=610000 address=0x3b data=0x107c
+[WRITE A] time=620000 address=0x3c data=0x107d
+[WRITE A] time=630000 address=0x3d data=0x107e
+[WRITE A] time=640000 address=0x3e data=0x107f
+[WRITE A] time=650000 address=0x3f data=0x1080
+[PASS] Testbench seeded all 64 memory locations
+
+===============================================================
+ TEST 1: PORT A WRITE / READBACK
+===============================================================
+[WRITE A] time=660000 address=0x05 data=0xa55a
+  PORT A | ADDR=0x05 | EXPECTED=0xa55a | ACTUAL=0xa55a
+[PASS] Port A readback after writing address 5
+
+===============================================================
+ TEST 2: PORT B WRITE / READBACK
+===============================================================
+[WRITE B] time=670000 address=0x0c data=0xb66b
+  PORT B | ADDR=0x0c | EXPECTED=0xb66b | ACTUAL=0xb66b
+[PASS] Port B readback after writing address 12
+
+===============================================================
+ TEST 3: SIMULTANEOUS WRITES TO DIFFERENT ADDRESSES
+===============================================================
+[SIMULTANEOUS WRITE]
+  Port A: address=0x14 data=0xCA20
+  Port B: address=0x15 data=0xCB21
+  PORT A | ADDR=0x14 | EXPECTED=0xca20 | ACTUAL=0xca20
+[PASS] Port A wrote address 20 during simultaneous access
+  PORT B | ADDR=0x15 | EXPECTED=0xcb21 | ACTUAL=0xcb21
+[PASS] Port B wrote address 21 during simultaneous access
+
+===============================================================
+ TEST 4: BOTH PORTS READ THE SAME ADDRESS
+===============================================================
+  PORT A | ADDR=0x05 | EXPECTED=0xa55a | ACTUAL=0xa55a
+[PASS] Port A reads address 5
+  PORT B | ADDR=0x05 | EXPECTED=0xa55a | ACTUAL=0xa55a
+[PASS] Port B reads address 5
+
+===============================================================
+ TEST 5: WRITE DISABLED
+===============================================================
+  PORT A | ADDR=0x05 | EXPECTED=0xa55a | ACTUAL=0xa55a
+[PASS] Port A data retained while write enable is low
+  PORT B | ADDR=0x05 | EXPECTED=0xa55a | ACTUAL=0xa55a
+[PASS] Port B sees retained data while writes are disabled
+
+===============================================================
+ TEST 6: SAME-ADDRESS WRITE CONFLICT
+===============================================================
+[COLLISION] Both ports request address 0x1E.
+  Port A data=0xAAAA; Port B data=0xBBBB
+  Expected policy: reject both writes; retain previous word.
+  PORT A | ADDR=0x1e | EXPECTED=0x105f | ACTUAL=0x105f
+[PASS] Same-address conflict leaves prior word unchanged on Port A
+  PORT B | ADDR=0x1e | EXPECTED=0x105f | ACTUAL=0x105f
+[PASS] Same-address conflict leaves prior word unchanged on Port B
+
+===============================================================
+ TEST 7: RESET MASKING AND MEMORY RETENTION
+===============================================================
+  PORT A | ADDR=0x05 | EXPECTED=0x0000 | ACTUAL=0x0000
+[PASS] Reset masks Port A output
+  PORT B | ADDR=0x0c | EXPECTED=0x0000 | ACTUAL=0x0000
+[PASS] Reset masks Port B output
+  PORT A | ADDR=0x05 | EXPECTED=0xa55a | ACTUAL=0xa55a
+[PASS] Address 5 retained through reset; reset-time write inhibited
+  PORT B | ADDR=0x0c | EXPECTED=0xb66b | ACTUAL=0xb66b
+[PASS] Address 12 retained through reset
+
+===============================================================
+ FINAL MEMORY DUMP: ADDRESS | 16-BIT HEX DATA | LOW-BYTE ASCII
+===============================================================
+  ADDR=0x00 | DATA=0x1041 | LOW-BYTE ASCII='A'
+  ADDR=0x01 | DATA=0x1042 | LOW-BYTE ASCII='B'
+  ADDR=0x02 | DATA=0x1043 | LOW-BYTE ASCII='C'
+  ADDR=0x03 | DATA=0x1044 | LOW-BYTE ASCII='D'
+  ADDR=0x04 | DATA=0x1045 | LOW-BYTE ASCII='E'
+  ADDR=0x05 | DATA=0xa55a | LOW-BYTE ASCII='Z'
+  ADDR=0x06 | DATA=0x1047 | LOW-BYTE ASCII='G'
+  ADDR=0x07 | DATA=0x1048 | LOW-BYTE ASCII='H'
+  ADDR=0x08 | DATA=0x1049 | LOW-BYTE ASCII='I'
+  ADDR=0x09 | DATA=0x104a | LOW-BYTE ASCII='J'
+  ADDR=0x0a | DATA=0x104b | LOW-BYTE ASCII='K'
+  ADDR=0x0b | DATA=0x104c | LOW-BYTE ASCII='L'
+  ADDR=0x0c | DATA=0xb66b | LOW-BYTE ASCII='k'
+  ADDR=0x0d | DATA=0x104e | LOW-BYTE ASCII='N'
+  ADDR=0x0e | DATA=0x104f | LOW-BYTE ASCII='O'
+  ADDR=0x0f | DATA=0x1050 | LOW-BYTE ASCII='P'
+  ADDR=0x10 | DATA=0x1051 | LOW-BYTE ASCII='Q'
+  ADDR=0x11 | DATA=0x1052 | LOW-BYTE ASCII='R'
+  ADDR=0x12 | DATA=0x1053 | LOW-BYTE ASCII='S'
+  ADDR=0x13 | DATA=0x1054 | LOW-BYTE ASCII='T'
+  ADDR=0x14 | DATA=0xca20 | LOW-BYTE ASCII=' '
+  ADDR=0x15 | DATA=0xcb21 | LOW-BYTE ASCII='!'
+  ADDR=0x16 | DATA=0x1057 | LOW-BYTE ASCII='W'
+  ADDR=0x17 | DATA=0x1058 | LOW-BYTE ASCII='X'
+  ADDR=0x18 | DATA=0x1059 | LOW-BYTE ASCII='Y'
+  ADDR=0x19 | DATA=0x105a | LOW-BYTE ASCII='Z'
+  ADDR=0x1a | DATA=0x105b | LOW-BYTE ASCII='['
+  ADDR=0x1b | DATA=0x105c | LOW-BYTE ASCII='\'
+  ADDR=0x1c | DATA=0x105d | LOW-BYTE ASCII=']'
+  ADDR=0x1d | DATA=0x105e | LOW-BYTE ASCII='^'
+  ADDR=0x1e | DATA=0x105f | LOW-BYTE ASCII='_'
+  ADDR=0x1f | DATA=0x1060 | LOW-BYTE ASCII='`'
+  ADDR=0x20 | DATA=0x1061 | LOW-BYTE ASCII='a'
+  ADDR=0x21 | DATA=0x1062 | LOW-BYTE ASCII='b'
+  ADDR=0x22 | DATA=0x1063 | LOW-BYTE ASCII='c'
+  ADDR=0x23 | DATA=0x1064 | LOW-BYTE ASCII='d'
+  ADDR=0x24 | DATA=0x1065 | LOW-BYTE ASCII='e'
+  ADDR=0x25 | DATA=0x1066 | LOW-BYTE ASCII='f'
+  ADDR=0x26 | DATA=0x1067 | LOW-BYTE ASCII='g'
+  ADDR=0x27 | DATA=0x1068 | LOW-BYTE ASCII='h'
+  ADDR=0x28 | DATA=0x1069 | LOW-BYTE ASCII='i'
+  ADDR=0x29 | DATA=0x106a | LOW-BYTE ASCII='j'
+  ADDR=0x2a | DATA=0x106b | LOW-BYTE ASCII='k'
+  ADDR=0x2b | DATA=0x106c | LOW-BYTE ASCII='l'
+  ADDR=0x2c | DATA=0x106d | LOW-BYTE ASCII='m'
+  ADDR=0x2d | DATA=0x106e | LOW-BYTE ASCII='n'
+  ADDR=0x2e | DATA=0x106f | LOW-BYTE ASCII='o'
+  ADDR=0x2f | DATA=0x1070 | LOW-BYTE ASCII='p'
+  ADDR=0x30 | DATA=0x1071 | LOW-BYTE ASCII='q'
+  ADDR=0x31 | DATA=0x1072 | LOW-BYTE ASCII='r'
+  ADDR=0x32 | DATA=0x1073 | LOW-BYTE ASCII='s'
+  ADDR=0x33 | DATA=0x1074 | LOW-BYTE ASCII='t'
+  ADDR=0x34 | DATA=0x1075 | LOW-BYTE ASCII='u'
+  ADDR=0x35 | DATA=0x1076 | LOW-BYTE ASCII='v'
+  ADDR=0x36 | DATA=0x1077 | LOW-BYTE ASCII='w'
+  ADDR=0x37 | DATA=0x1078 | LOW-BYTE ASCII='x'
+  ADDR=0x38 | DATA=0x1079 | LOW-BYTE ASCII='y'
+  ADDR=0x39 | DATA=0x107a | LOW-BYTE ASCII='z'
+  ADDR=0x3a | DATA=0x107b | LOW-BYTE ASCII='{'
+  ADDR=0x3b | DATA=0x107c | LOW-BYTE ASCII='|'
+  ADDR=0x3c | DATA=0x107d | LOW-BYTE ASCII='}'
+  ADDR=0x3d | DATA=0x107e | LOW-BYTE ASCII='~'
+  ADDR=0x3e | DATA=0x107f | LOW-BYTE ASCII=N/A
+  ADDR=0x3f | DATA=0x1080 | LOW-BYTE ASCII=N/A
+
+===============================================================
+ SELF-CHECK SUMMARY
+===============================================================
+  Total checks : 16
+  Passed       : 16
+  Failed       : 0
+  FINAL RESULT : PASS
+===============================================================
+[FAIL] Simulation timeout
+Simulation complete via $finish(1) at time 800 NS + 0
+./day23_tb.v:399         $finish;
+ncsim>
