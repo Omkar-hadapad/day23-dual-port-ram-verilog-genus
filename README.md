@@ -96,27 +96,30 @@ The project covers:
 ![Dual-Port RAM block diagram](images/dual_port_ram_block_diagram.png)
 ## System Architecture Flowchart
 
+
+
 ```mermaid
-flowchart TB
+graph TD
     TOP["Day23_top"] --> RAM["U_RAM: dual_port_ram"]
 
-    subgraph PA["Port A"]
-        AA["addr_a [5:0]"]
-        DA["din_a [15:0]"]
-        WA["we_a"]
-        OA["dout_a [15:0]"]
+    subgraph PORT_A["Port A"]
+        AA["Address A: 6 bits"]
+        DA["Input Data A: 16 bits"]
+        WA["Write Enable A"]
+        OA["Output Data A: 16 bits"]
     end
 
-    subgraph PB["Port B"]
-        AB["addr_b [5:0]"]
-        DB["din_b [15:0]"]
-        WB["we_b"]
-        OB["dout_b [15:0]"]
+    subgraph PORT_B["Port B"]
+        AB["Address B: 6 bits"]
+        DB["Input Data B: 16 bits"]
+        WB["Write Enable B"]
+        OB["Output Data B: 16 bits"]
     end
 
-    RAM --> DEC["Address Decode / Selection"]
-    RAM --> WC["WC: write_control"]
-    DEC --> MEM[("Memory Array<br/>64 × 16 bits<br/>1024 bits")]
+    RAM --> DEC["Address Decoder"]
+    RAM --> WC["Write Control"]
+
+    DEC --> MEM["Memory Array: 64 words x 16 bits"]
     WC --> MEM
 
     AA --> DEC
@@ -126,22 +129,24 @@ flowchart TB
     WA --> WC
     WB --> WC
 
-    MEM --> RA["Port A asynchronous read"]
-    MEM --> RB["Port B asynchronous read"]
-    RA --> MA["Reset output mask"]
-    RB --> MB["Reset output mask"]
+    MEM --> RA["Port A Read"]
+    MEM --> RB["Port B Read"]
+
+    RA --> MA["Port A Reset Mask"]
+    RB --> MB["Port B Reset Mask"]
+
     MA --> OA
     MB --> OB
 
-    CLK["clk: positive-edge write"]
-    RST["rst: active-high"]
-    CLK --> WC
-    RST --> WC
+    CLK["Clock: Positive Edge"] --> WC
+    RST["Reset: Active High"] --> WC
     RST --> MA
     RST --> MB
 
-    WC -. "Same-address write conflict: reject both" .-> MEM
+    WC -.-> CONFLICT["Same-address write conflict: reject both"]
+    CONFLICT -.-> MEM
 ```
+
 
 If the image is stored elsewhere in the repository, update the path above to match the actual filename.
 
